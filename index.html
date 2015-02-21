@@ -1,0 +1,266 @@
+
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="https://s3.amazonaws.com/remoats/scripts/github/remotes.ne.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+		    new Remotes("preview")
+		    .on("swipe-left", function(e){
+					Reveal.navigateRight();
+		         })
+			.on("swipe-right", function(e){
+					Reveal.navigateLeft();
+		         })
+			.on("swipe-up", function(e){
+					Reveal.navigateDown();
+		         })
+			.on("swipe-down", function(e){
+					Reveal.navigateUp();
+		         })
+			.on("tap", function(e){
+		            /* and the screen explodes */
+		         })
+			.on("hold", function(e){
+		            /* hold on */
+		         })
+			.on("release", function(e){
+		            /* hands off */
+		         });
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown
+				    data-separator="\n---\n$"
+				    data-vertical="\n--\n">
+				    <script type="text/template">
+
+## iroriをはじめる
+<br>
+### `for windows`
+
+---
+
+## githubをのぞく
+<br><br>
+### `github irori`とかでググると見つかる
+<br>
+### とりあえず`zip`でダウンロード
+
+--
+
+## Requirements
+<br>
+
+* Go (1.4 or later)
+
+* MongoDB
+
+* coffee-script
+
+---
+
+## Go言語（golang）
+<br>
+### 公式サイトからダウンロード
+<br>
+https://code.google.com/p/go/downloads/list?q=OpSys-Windows+Type%3DInstaller
+<br><br>
+※ `msi`から入れると環境変数も設定
+
+--
+
+## Hello, world!
+<br>
+hello.go
+```
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("hello, world!")
+}
+```
+<br>
+実行結果
+```
+> go run hello.go
+hello, world!
+```
+
+--
+
+## エディタ
+<br>
+### `Atom`とか`Sublime Text`とか
+![image](./image/atom.png)
+
+`Packages`入れてシンタックス・ハイライトとかコード補完とか
+
+https://atom.io
+
+---
+
+## MongoDB
+<br>
+### 公式サイトからダウンロード
+<br>
+http://www.mongodb.org/downloads
+<br><br>
+※ 環境変数を自分で設定
+<br>
+`C:\Program Files\MongoDB 2.6 Standard\bin`
+
+--
+
+## MongoDBの起動
+<br>
+```
+> mongod --dbpath C:\mongodata\db
+```
+![image](./image/mongo.png)
+
+---
+
+## CoffeeScript
+<br>
+### `Node.js`をまずインストール
+<br>
+http://nodejs.org
+
+--
+
+## CoffeeScript のインストール
+<br><br>
+### `Node.js command prompt`を起動
+<br>
+インストール
+```
+> npm install -g coffee-script
+```
+
+--
+
+## バージョン確認
+<br><br>
+```
+> coffee --version
+CoffeeScript version 1.9.1
+```
+
+---
+
+## ビルド＆起動
+<br><br>
+```
+> make
+> ./irori -bind :9090
+```
+
+--
+
+## MinGW-w64，MSYS
+<br><br>
+### `MinGW(64bit)`入れたり，`MSYS`入れたり
+<br>
+http://sourceforge.net/projects/mingw-w64/files/
+
+--
+
+## ビルド＆起動
+![image](./image/run.png)
+
+--
+
+## irori
+### http://localhost:9090/wiki
+![image](./image/irori.png)
+
+---
+
+# Thank U for Reading
+<br>
+### BY tsutsu
+
+				    </script>
+				</sectin>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
