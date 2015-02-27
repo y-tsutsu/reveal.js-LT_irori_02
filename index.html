@@ -80,165 +80,153 @@
 
 ## iroriをはじめる
 <br>
-### `for windows`
+### よりみち編
 
 ---
 
 ## githubをのぞく
 <br><br>
-### `github irori`でググると見つかる
-<br>
-### とりあえず`zip`でダウンロード
+```
+> make
+> ./irori -bind :9090
+```
 <br>
 https://github.com/maueki/irori
 
 --
 
-## Requirements
-<br>
-
-* Go (1.4 or later)
-
-* MongoDB
-
-* coffee-script
+## `(´Д｀；)？`
 
 ---
 
-## Go言語（golang）
-<br>
-### 公式サイトからダウンロード
-<br>
-https://code.google.com/p/go/downloads/list?q=OpSys-Windows+Type%3DInstaller
-<br><br>
-
-* `msi`から入れると環境変数も設定
-
-* `GOPATH`は自分で設定する必要あり
-
---
-
-## Hello, world!
-<br>
-hello.go
-```
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("hello, world!")
-}
-```
-<br>
-実行結果
-```
-> go run hello.go
-hello, world!
-```
-
---
-
-## Mercurial（hgコマンド）
-<br>
-
-* `go get`に必要
-
-* `Windows`だと`TortoiseHG`あたり？
-
-<br>
-バージョン確認
-```
-> hg version
-Mercurial - 分散構成管理ツール(バージョン 3.3)
-(詳細は http://mercurial.selenic.com を参照)
-```
-
---
-
-## エディタ
-<br>
-### `Atom`とか`Sublime Text`とか
-![image](./image/atom.png)
-
-`Packages`入れてシンタックスハイライトとかコード補完とか
-
-http://qiita.com/m0a/items/b7b27254a43d50b7aba2
-http://qiita.com/horimislime/items/72de9580125151ac6af0
+## 予定を変えて．．．
 
 ---
 
-## MongoDB
+## Webアプリをはじめる
 <br>
-### 公式サイトからダウンロード
-<br>
-http://www.mongodb.org/downloads
-<br><br>
-※ 環境変数を自分で設定
-<br>
-`C:\Program Files\MongoDB 2.6 Standard\bin`
-
---
-
-## MongoDBの起動
-<br>
-```
-> mongod --dbpath C:\mongodata\db
-```
-![image](./image/mongo.png)
+### `with Python`
 
 ---
 
-## CoffeeScript
+## やりたいこと
 <br>
-### `Node.js`をまずインストール
+### `ブログアプリ`を作りたい！
 <br>
-http://nodejs.org
 
---
+* 内容を保存したい
 
-## CoffeeScript のインストール
-<br>
-`Node.js command prompt`を起動
-<br><br>
-インストール
-```
-> npm install -g coffee-script
-```
-<br>
-バージョン確認
-```
-> coffee --version
-CoffeeScript version 1.9.1
-```
+* ログインの機能は入れたい
+
+* 今っぽいデザインにしたい
+
+* インターネットにデプロイしたい
 
 ---
 
-## ビルド＆起動
-<br><br>
-```
-> make
-> ./irori -bind :9090
-```
-
---
-
-## MinGW-w64，MSYS
-<br><br>
-### `MinGW(64bit)`入れたり`MSYS`入れたり
+## Webフレームワーク
 <br>
-http://sourceforge.net/projects/mingw-w64/files/
+### `～Python～`
 
 --
 
-## ビルド＆起動
-![image](./image/run.png)
+## 代用的なやつ
+<br>
+
+* Django
+<br>http://www.djangoproject.jp/
+
+* Flask
+<br>http://a2c.bitbucket.org/flask/
+
+* Bottle
+<br>http://bottlepy.org/
+
+* Pyramid
+<br>https://pyramid-doc-ja.readthedocs.org/
 
 --
 
-## irori
-### http://localhost:9090/wiki
-![image](./image/irori.png)
+## `Visual Studio`
+<br>
+![image](./image/PTVS.png)
+<br>
+http://pytools.codeplex.com
+
+---
+
+## 今っぽいデザイン
+
+--
+
+## `Bootstrap`
+<br>
+![image](./image/bootstrap.png)
+
+--
+
+## `Fort Awesome`
+<br>
+![image](./image/fortawesome.png)
+
+---
+
+## ネットにデプロイする
+
+--
+
+## iroriのデモページ
+<br>
+![image](./image/demourl.png)
+
+--
+
+## `Heroku`を使う
+<br>
+ちなみに，その他のホスティングサービス
+<br>
+<br>
+
+* `Google App Engine`
+
+* `AWS`
+
+* `Microsoft Azure`
+
+--
+
+## デプロイの手順
+<br>
+
+* `heroku`のアカウントを作る
+
+* `heroku`のコマンドをインストール
+
+* ローカルで`git`コミット
+
+* ローカルから`heroku`の初期化
+
+* `heroku`のリモートリポジトリに`push`
+
+--
+
+## その他のポイント
+<br>
+
+* 環境の切り替え
+<br>`django-dotenv`
+
+* Appサーバー
+<br>`gunicorn`
+
+* staticファイルの取り扱い
+<br>`whitenoise`
+
+---
+
+## 公開したアプリ
+<br>
+http://mondja.herokuapp.com
 
 ---
 
